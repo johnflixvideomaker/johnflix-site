@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOHN FLIX Videomaker · Portfólio</title>
+<meta name="description" content="JOHN FLIX Videomaker — documentários, institucional, aftermovies, 15 anos, rodeios e comerciais. Captação 4K, edição rítmica, sound design e color grading.">
+<meta property="og:title" content="JOHN FLIX Videomaker">
+<meta property="og:description" content="Vídeos que fazem sentir. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { fundo: '#0A0A0A', cartao: '#141414', vermelho: '#E50914', texto: '#ECECEC', apagado: '#8C8C8C', linha: '#262626' },
+        fontFamily: { titulo: ['"Bebas Neue"', 'sans-serif'], corpo: ['Inter', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #0A0A0A; color: #ECECEC; font-family: Inter, sans-serif; }
+  .selo { background: #F4F4F4; border-radius: 14px; padding: 6px 12px; display: inline-flex; align-items: center; }
+  .filtro { border: 1px solid #262626; color: #ECECEC; transition: all .2s; white-space: nowrap; }
+  .filtro:hover { border-color: #E50914; }
+  .filtro.ativo { background: #E50914; border-color: #E50914; color: #fff; }
+  .card img { transition: transform .5s ease; }
+  .card:hover img { transform: scale(1.06); }
+  .card .play { opacity: 0; transition: opacity .25s; }
+  .card:hover .play { opacity: 1; }
+  .rolagem-x { scrollbar-width: none; }
+  .rolagem-x::-webkit-scrollbar { display: none; }
+  .grao { background-image: radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px); background-size: 3px 3px; }
+  @keyframes pulso { 0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.55); } 50% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } }
+  .pulso { animation: pulso 2.4s infinite; }
+  .esqueleto { background: linear-gradient(90deg,#141414 25%,#1d1d1d 50%,#141414 75%); background-size: 200% 100%; animation: brilho 1.4s infinite; }
+  @keyframes brilho { to { background-position: -200% 0; } }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- HEADER -->
+<header id="topo" class="fixed top-0 inset-x-0 z-40 transition-all duration-300 border-linha">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+    <a href="#" class="selo" aria-label="JOHN FLIX Videomaker — início">
+      <img src="logo.png" alt="JOHN FLIX Videomaker" class="h-10 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-apagado">
+      <a href="#portfolio" class="hover:text-texto">Portfólio</a>
+      <a href="#sobre" class="hover:text-texto">Sobre</a>
+      <a href="#servicos" class="hover:text-texto">Serviços</a>
+      <a href="#contato" class="hover:text-texto">Contato</a>
+    </nav>
+    <a data-whats="Olá João! Vim pelo seu site e quero fazer um orçamento." target="_blank" rel="noopener"
+       class="bg-vermelho hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-full flex items-center gap-2 transition">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.8 18L.1 24l6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg>
+      <span class="hidden sm:inline">Orçamento</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-[100svh] flex items-center pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
+  <img src="foto-topo.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+  <div class="absolute inset-0 bg-gradient-to-r from-fundo/95 via-fundo/75 to-fundo/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-fundo via-transparent to-fundo/60"></div>
+  <div class="absolute inset-0 grao pointer-events-none"></div>
+  <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-vermelho/20 blur-[120px] pointer-events-none"></div>
+  <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-vermelho text-xs sm:text-sm font-semibold tracking-[.3em] uppercase mb-5">Ituiutaba · Triângulo Mineiro</p>
+    <h1 class="font-titulo text-6xl sm:text-8xl lg:text-9xl leading-[.9] tracking-wide">
+      Vídeos que<br>fazem <span class="text-vermelho">sentir.</span>
+    </h1>
+    <p class="mt-6 max-w-xl text-apagado text-base sm:text-lg leading-relaxed">
+      Direção, captação em 4K, edição no ritmo da música e sound design que arrepia. Do documentário ao aftermovie, cada corte conta uma história.
+    </p>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a href="#portfolio" class="bg-vermelho hover:bg-red-700 text-white font-semibold px-6 py-3.5 rounded-full transition">Ver portfólio</a>
+      <a data-whats="Olá João! Vim pelo seu site e quero fazer um orçamento." target="_blank" rel="noopener"
+         class="border border-linha hover:border-texto px-6 py-3.5 rounded-full font-semibold transition">Falar no WhatsApp</a>
+    </div>
+    <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-px bg-linha rounded-2xl overflow-hidden max-w-3xl">
+      <div class="bg-fundo/80 backdrop-blur p-4"><p class="font-titulo text-3xl text-vermelho">4K</p><p class="text-xs text-apagado">Captação em Log</p></div>
+      <div class="bg-fundo/80 backdrop-blur p-4"><p class="font-titulo text-3xl">Direção</p><p class="text-xs text-apagado">Roteiro e storytelling</p></div>
+      <div class="bg-fundo/80 backdrop-blur p-4"><p class="font-titulo text-3xl">Ritmo</p><p class="text-xs text-apagado">Edição na batida</p></div>
+      <div class="bg-fundo/80 backdrop-blur p-4"><p class="font-titulo text-3xl">Som</p><p class="text-xs text-apagado">Sound design</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio" class="py-16 sm:py-24 border-t border-linha scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="text-vermelho text-xs font-semibold tracking-[.3em] uppercase mb-2">Portfólio</p>
+        <h2 class="font-titulo text-5xl sm:text-6xl tracking-wide">Trabalhos recentes</h2>
+      </div>
+      <p id="contagem" class="text-sm text-apagado"></p>
+    </div>
+
+    <div id="filtros" class="rolagem-x flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0"></div>
+
+    <div id="grade" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    <p id="vazio" class="hidden text-center text-apagado py-16">Nenhum vídeo nesta categoria ainda. Em breve tem novidade! 🎬</p>
+
+    <div class="mt-10 text-center">
+      <a href="https://www.youtube.com/@johnflixvideoMaker" target="_blank" rel="noopener" class="text-sm text-apagado hover:text-texto underline underline-offset-4">Ver tudo no canal do YouTube →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre" class="py-16 sm:py-24 border-t border-linha scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+    <div class="relative">
+      <div class="absolute -inset-3 rounded-3xl bg-vermelho/20 blur-2xl pointer-events-none"></div>
+      <img src="foto-sobre.jpg" alt="João Carlos, filmmaker da JOHN FLIX Videomaker" loading="lazy"
+           class="relative w-full aspect-[4/5] object-cover rounded-2xl border border-linha">
+    </div>
+    <div>
+      <p class="text-vermelho text-xs font-semibold tracking-[.3em] uppercase mb-2">Sobre mim</p>
+      <h2 class="font-titulo text-5xl sm:text-6xl tracking-wide mb-6">Prazer, João Carlos</h2>
+      <p class="text-apagado text-base sm:text-lg leading-relaxed mb-4">
+        Sou filmmaker e editor em Ituiutaba-MG, por trás da JOHN FLIX Videomaker. Formado em documentário pelo
+        Instituto Federal de Goiás e em audiovisual pelo Senac, levo olhar de cinema pra cada projeto.
+      </p>
+      <p class="text-apagado text-base sm:text-lg leading-relaxed">
+        Filmo congressos de dança, eventos, rodeios e comerciais, sempre buscando o momento que faz a pessoa
+        sentir de novo quando assiste.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-2">
+        <span class="text-xs border border-linha rounded-full px-3 py-1.5">🎓 Documentário · IF Goiás</span>
+        <span class="text-xs border border-linha rounded-full px-3 py-1.5">🎓 Audiovisual · Senac</span>
+        <span class="text-xs border border-linha rounded-full px-3 py-1.5">📍 Ituiutaba-MG</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-16 sm:py-24 border-t border-linha bg-cartao/40 scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p class="text-vermelho text-xs font-semibold tracking-[.3em] uppercase mb-2">Serviços</p>
+    <h2 class="font-titulo text-5xl sm:text-6xl tracking-wide mb-10">O que eu entrego</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-cartao border border-linha rounded-2xl p-6 hover:border-vermelho/60 transition">
+        <div class="w-11 h-11 rounded-xl bg-vermelho/15 text-vermelho flex items-center justify-center mb-5">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.55-2.28A1 1 0 0121 8.62v6.76a1 1 0 01-1.45.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Captação Log</h3>
+        <p class="text-sm text-apagado leading-relaxed">Filmagem em 4K com perfil Log, gimbal e drone. Mais detalhe e mais liberdade na cor.</p>
+      </div>
+      <div class="bg-cartao border border-linha rounded-2xl p-6 hover:border-vermelho/60 transition">
+        <div class="w-11 h-11 rounded-xl bg-vermelho/15 text-vermelho flex items-center justify-center mb-5">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19V6l12-3v13M9 19c0 1.1-1.34 2-3 2s-3-.9-3-2 1.34-2 3-2 3 .9 3 2zm12-3c0 1.1-1.34 2-3 2s-3-.9-3-2 1.34-2 3-2 3 .9 3 2zM9 10l12-3"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Sound Design</h3>
+        <p class="text-sm text-apagado leading-relaxed">Whooshes, risers e foley no lugar certo. O som que faz o vídeo ganhar vida.</p>
+      </div>
+      <div class="bg-cartao border border-linha rounded-2xl p-6 hover:border-vermelho/60 transition">
+        <div class="w-11 h-11 rounded-xl bg-vermelho/15 text-vermelho flex items-center justify-center mb-5">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18z" fill="currentColor"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Color Grading</h3>
+        <p class="text-sm text-apagado leading-relaxed">Cor de cinema no DaVinci Resolve, com identidade visual para cada projeto.</p>
+      </div>
+      <div class="bg-cartao border border-linha rounded-2xl p-6 hover:border-vermelho/60 transition">
+        <div class="w-11 h-11 rounded-xl bg-vermelho/15 text-vermelho flex items-center justify-center mb-5">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.12 14.12L19 19M4 4l10.12 10.12M8.12 8.12L4 12m0 0l4 4m-4-4h7M20 4l-8 8"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Edição Dinâmica</h3>
+        <p class="text-sm text-apagado leading-relaxed">Cortes na batida, speed ramp, storytelling e formatos prontos para Reels e TikTok.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-20 sm:py-28 border-t border-linha scroll-mt-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-titulo text-5xl sm:text-7xl tracking-wide">Bora gravar o <span class="text-vermelho">seu</span>?</h2>
+    <p class="mt-5 text-apagado text-base sm:text-lg">Me conta a ideia, a data e o local. Eu respondo rapidinho pelo WhatsApp.</p>
+    <a data-whats="Olá João! Vim pelo seu site e quero fazer um orçamento." target="_blank" rel="noopener"
+       class="mt-9 inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebe5a] text-black font-bold px-8 py-4 rounded-full text-lg transition">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.8 18L.1 24l6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg>
+      Pedir orçamento
+    </a>
+    <p class="mt-4 text-sm text-apagado">(34) 98428-4990</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-linha py-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-5">
+    <span class="selo"><img src="logo.png" alt="JOHN FLIX Videomaker" class="h-12 w-auto"></span>
+    <div class="flex items-center gap-5 text-sm text-apagado">
+      <a href="https://www.instagram.com/johnflixvideomaker" target="_blank" rel="noopener" class="hover:text-texto">Instagram</a>
+      <a href="https://www.youtube.com/@johnflixvideoMaker" target="_blank" rel="noopener" class="hover:text-texto">YouTube</a>
+      <a data-whats="Olá João! Vim pelo seu site e quero fazer um orçamento." target="_blank" rel="noopener" class="hover:text-texto">WhatsApp</a>
+    </div>
+    <p class="text-xs text-apagado">© <span id="ano"></span> JOHN FLIX Videomaker</p>
+  </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a data-whats="Olá João! Vim pelo seu site e quero fazer um orçamento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+   class="pulso fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-black flex items-center justify-center shadow-lg hover:scale-105 transition">
+  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.8 18L.1 24l6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg>
+</a>
+
+<!-- MODAL DO VÍDEO -->
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4" role="dialog" aria-modal="true">
+  <div class="w-full max-w-4xl">
+    <div class="flex justify-between items-center mb-3 gap-4">
+      <h3 id="modalTitulo" class="font-semibold text-sm sm:text-base truncate"></h3>
+      <button id="fechar" class="text-apagado hover:text-white text-3xl leading-none" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden">
+      <iframe id="player" class="absolute inset-0 w-full h-full" src="" title="Vídeo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <a id="modalWhats" target="_blank" rel="noopener"
+       class="mt-4 w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5a] text-black font-bold px-6 py-3.5 rounded-full transition">
+      Quero um vídeo igual a esse
+    </a>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   CONFIGURAÇÃO — mexa só aqui
+   ===================================================================== */
+const YOUTUBE_API_KEY = "AIzaSyDCI_7VB97LLGJOZM0ue--vxq4fH_QvLSc";                 // cole aqui sua chave da YouTube Data API v3
+const CANAL_HANDLE    = "johnflixvideoMaker";
+const WHATSAPP        = "5534984284990";
+
+// Palavras do título que mandam o vídeo para cada nicho (sem acento, minúsculas).
+// A ordem importa: o primeiro nicho que bater ganha (por isso Rodeios vem antes de Festas).
+const NICHOS = [
+  { id: "rodeios",       nome: "Rodeios",             palavras: ["rodeio", "cavalgada", "peao", "montaria", "country"] },
+  { id: "documentarios", nome: "Documentários",       palavras: ["documentario", "doc ", "historia", "minidoc", "curta"] },
+  { id: "social",        nome: "15 Anos / Social",    palavras: ["15 anos", "quinze anos", "debutante", "aniversario", "casamento", "noivado", "pre wedding", "batizado", "formatura"] },
+  { id: "aftermovie",    nome: "Aftermovie / Festas", palavras: ["aftermovie", "after movie", "festa", "show", "junina", "arraia", "baile", "congresso de danca", "danca"] },
+  { id: "institucional", nome: "Institucional",       palavras: ["institucional", "empresa", "corporativo", "evento corporativo", "congresso"] },
+  { id: "comercial",     nome: "Comercial & Edição",  palavras: ["comercial", "reels", "propaganda", "anuncio", "edicao", "loja", "produto", "publicidade", "vinheta"] },
+];
+// Ordem em que os botões aparecem na tela
+const ORDEM_FILTROS = ["documentarios", "institucional", "aftermovie", "social", "rodeios", "comercial"];
+
+// Usado quando ainda não tem chave da API (ou se a API falhar).
+// Formato: { id: "ID_DO_YOUTUBE", titulo: "Título do vídeo" }
+const VIDEOS_RESERVA = [
+  // { id: "dQw4w9WgXcQ", titulo: "Aftermovie Congresso de Dança 2026" },
+];
+
+/* ===================================================================== */
+const semAcento = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const linkWhats = txt => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
+const escapar = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function classificar(titulo) {
+  const t = " " + semAcento(titulo) + " ";
+  const achado = NICHOS.find(n => n.palavras.some(p => t.includes(p)));
+  return achado ? achado.id : "outros";
+}
+
+let videos = [];
+let filtroAtual = "todos";
+
+// Puxa TODOS os vídeos do canal, seguindo o nextPageToken até acabar
+async function buscarYouTube() {
+  const base = "https://www.googleapis.com/youtube/v3";
+  const canal = await fetch(`${base}/channels?part=contentDetails&forHandle=${CANAL_HANDLE}&key=${YOUTUBE_API_KEY}`).then(r => r.json());
+  if (canal.error) throw new Error(canal.error.message);
+  const uploads = canal.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+  if (!uploads) throw new Error("Canal não encontrado");
+  let lista = [], token = "";
+  do {
+    const r = await fetch(`${base}/playlistItems?part=snippet&maxResults=50&playlistId=${uploads}&key=${YOUTUBE_API_KEY}${token ? "&pageToken=" + token : ""}`).then(r => r.json());
+    if (r.error) throw new Error(r.error.message);
+    (r.items || []).forEach(it => {
+      const s = it.snippet;
+      if (!s || s.title === "Private video" || s.title === "Deleted video") return;
+      const th = s.thumbnails || {};
+      lista.push({
+        id: s.resourceId.videoId,
+        titulo: s.title,
+        thumb: (th.maxres || th.high || th.medium || th.default || {}).url || `https://i.ytimg.com/vi/${s.resourceId.videoId}/hqdefault.jpg`,
+      });
+    });
+    token = r.nextPageToken || "";
+  } while (token);
+  return lista;
+}
+
+function desenharFiltros() {
+  const todos = [{ id: "todos", nome: "Todos" }, ...ORDEM_FILTROS.map(id => NICHOS.find(n => n.id === id))];
+  document.getElementById("filtros").innerHTML = todos.map(f => {
+    const qtd = f.id === "todos" ? videos.length : videos.filter(v => v.nicho === f.id).length;
+    return `<button data-f="${f.id}" class="filtro ${f.id === filtroAtual ? "ativo" : ""} text-sm font-medium px-4 py-2 rounded-full">
+              ${f.nome} <span class="opacity-60 ml-1">${qtd}</span></button>`;
+  }).join("");
+}
+
+function desenharGrade() {
+  const lista = filtroAtual === "todos" ? videos : videos.filter(v => v.nicho === filtroAtual);
+  const nomeNicho = id => NICHOS.find(n => n.id === id)?.nome || "Projeto";
+  document.getElementById("grade").innerHTML = lista.map(v => `
+    <button class="card group text-left bg-cartao border border-linha rounded-2xl overflow-hidden hover:border-vermelho/60 transition" data-id="${v.id}">
+      <div class="relative aspect-video overflow-hidden bg-black">
+        <img src="${v.thumb}" alt="${escapar(v.titulo)}" loading="lazy" class="w-full h-full object-cover"
+             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/hqdefault.jpg'">
+        <div class="play absolute inset-0 bg-black/40 flex items-center justify-center">
+          <span class="w-14 h-14 rounded-full bg-vermelho flex items-center justify-center">
+            <svg class="w-6 h-6 ml-1 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </div>
+      </div>
+      <div class="p-4">
+        <span class="text-[11px] font-semibold uppercase tracking-wider text-vermelho">${nomeNicho(v.nicho)}</span>
+        <h3 class="mt-1 font-medium leading-snug line-clamp-2">${escapar(v.titulo)}</h3>
+      </div>
+    </button>`).join("");
+  document.getElementById("vazio").classList.toggle("hidden", lista.length > 0);
+  document.getElementById("contagem").textContent = `${lista.length} vídeo${lista.length === 1 ? "" : "s"}`;
+}
+
+function esqueleto() {
+  document.getElementById("grade").innerHTML = Array.from({ length: 6 }, () => `
+    <div class="bg-cartao border border-linha rounded-2xl overflow-hidden">
+      <div class="aspect-video esqueleto"></div>
+      <div class="p-4 space-y-2"><div class="h-3 w-20 rounded esqueleto"></div><div class="h-4 w-full rounded esqueleto"></div></div>
+    </div>`).join("");
+}
+
+/* Modal */
+const modal = document.getElementById("modal");
+function abrirVideo(id) {
+  const v = videos.find(x => x.id === id);
+  if (!v) return;
+  document.getElementById("player").src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+  document.getElementById("modalTitulo").textContent = v.titulo;
+  document.getElementById("modalWhats").href = linkWhats(`Olá João! Vi o vídeo "${v.titulo}" e quero um orçamento igual.`);
+  modal.classList.remove("hidden"); modal.classList.add("flex");
+  document.body.style.overflow = "hidden";
+}
+function fecharVideo() {
+  document.getElementById("player").src = "";
+  modal.classList.add("hidden"); modal.classList.remove("flex");
+  document.body.style.overflow = "";
+}
+document.getElementById("fechar").onclick = fecharVideo;
+modal.addEventListener("click", e => { if (e.target === modal) fecharVideo(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") fecharVideo(); });
+
+document.getElementById("filtros").addEventListener("click", e => {
+  const b = e.target.closest("[data-f]"); if (!b) return;
+  filtroAtual = b.dataset.f; desenharFiltros(); desenharGrade();
+});
+document.getElementById("grade").addEventListener("click", e => {
+  const c = e.target.closest("[data-id]"); if (c) abrirVideo(c.dataset.id);
+});
+
+/* Links de WhatsApp e header */
+document.querySelectorAll("[data-whats]").forEach(a => a.href = linkWhats(a.dataset.whats));
+document.getElementById("ano").textContent = new Date().getFullYear();
+const topo = document.getElementById("topo");
+addEventListener("scroll", () => {
+  const rolou = scrollY > 20;
+  ["bg-fundo/90", "backdrop-blur", "border-b"].forEach(c => topo.classList.toggle(c, rolou));
+}, { passive: true });
+
+/* Início */
+(async function iniciar() {
+  esqueleto();
+  let lista = [];
+  if (YOUTUBE_API_KEY) {
+    try { lista = await buscarYouTube(); }
+    catch (e) { console.warn("YouTube API falhou, usando a lista reserva:", e); }
+  } else {
+    console.warn("YOUTUBE_API_KEY está vazia: usando só a VIDEOS_RESERVA.");
+  }
+  if (!lista.length) {
+    lista = VIDEOS_RESERVA.map(v => ({ ...v, thumb: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg` }));
+  }
+  videos = lista.map(v => ({ ...v, nicho: classificar(v.titulo) }));
+  desenharFiltros(); desenharGrade();
+})();
+</script>
+</body>
+</html>
